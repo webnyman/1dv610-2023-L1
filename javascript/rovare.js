@@ -1,12 +1,13 @@
 const textInputForName = document.querySelector('#yourName')
 const submitButton = document.querySelector('#submit')
+const messageDiv = document.querySelector('#messageDiv')
 
 submitButton.addEventListener('click', () => {
   const name = textInputForName.value
   const greeting = 'Hej'
   const greetingRovarSprak = translateToRovarSprak(greeting)
   const namnRovarsprak = translateToRovarSprak(name)
-  console.log(greetingRovarSprak + ' ' + namnRovarsprak)
+  messageDiv.innerText = (greetingRovarSprak + ' ' + namnRovarsprak)
 })
 
 const translateToRovarSprak = (textToTranslate) => {
