@@ -7,7 +7,8 @@ submitButton.addEventListener('click', () => {
   const greeting = 'Hej'
   const greetingRovarSprak = translateToRovarSprak(greeting)
   const namnRovarsprak = translateToRovarSprak(name)
-  messageDiv.innerText = (greetingRovarSprak + ' ' + namnRovarsprak)
+  messageDiv.innerText = (greetingRovarSprak + ' ' + namnRovarsprak + '!')
+  showRovarImage()
 })
 
 const translateToRovarSprak = (textToTranslate) => {
@@ -21,4 +22,9 @@ const translateToRovarSprak = (textToTranslate) => {
     }
   }
   return rovarSprak
+}
+
+const showRovarImage = () => {
+  const rovarImage = document.querySelector('#rovarImage')
+  rovarImage.classList.remove('d-none')
 }
