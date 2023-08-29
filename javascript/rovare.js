@@ -18,7 +18,7 @@ const translateToRovarSprak = (textToTranslate) => {
     if (vowels.includes(letter)) {
       rovarSprak += letter
     } else {
-      rovarSprak += letter + 'o' + letter
+      rovarSprak += letter + 'o' + letter.toLowerCase()
     }
   }
   return rovarSprak
