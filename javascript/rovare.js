@@ -1,7 +1,9 @@
+// Variables for the anonymous function
 const textInputForName = document.querySelector('#yourName')
 const submitButton = document.querySelector('#submit')
 const messageDiv = document.querySelector('#messageDiv')
 
+// Eventlistener for the button
 submitButton.addEventListener('click', () => {
   const name = textInputForName.value
   const greeting = 'Hej'
@@ -11,6 +13,12 @@ submitButton.addEventListener('click', () => {
   showRovarImage()
 })
 
+/**
+ * Function that translates a text to rovarsprak
+ *
+ * @param {*} textToTranslate
+ * @return {*} rovarsPrak
+ */
 const translateToRovarSprak = (textToTranslate) => {
   const vowels = ['a', 'e', 'i', 'o', 'u', 'å', 'ä', 'ö']
   let rovarSprak = ''
@@ -24,6 +32,7 @@ const translateToRovarSprak = (textToTranslate) => {
   return rovarSprak
 }
 
+// Function that shows the rovar image
 const showRovarImage = () => {
   const rovarImage = document.querySelector('#rovarImage')
   rovarImage.classList.remove('d-none')
