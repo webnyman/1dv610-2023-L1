@@ -8,16 +8,16 @@ submitButton.addEventListener('click', () => {
   const name = textInputForName.value
   const greeting = 'Hej'
   const greetingRovarSprak = translateToRovarSprak(greeting)
-  const namnRovarsprak = translateToRovarSprak(name)
-  messageDiv.innerText = (greetingRovarSprak + ' ' + namnRovarsprak + '!')
+  const nameRovarsprak = translateToRovarSprak(name)
+  messageDiv.innerText = (greetingRovarSprak + ' ' + nameRovarsprak + '!')
   showRovarImage()
 })
 
 /**
  * Function that translates a text to rovarsprak
  *
- * @param {*} textToTranslate
- * @return {*} rovarsPrak
+ * @param {string} textToTranslate
+ * @return {string} rovarsPrak
  */
 const translateToRovarSprak = (textToTranslate) => {
   const vowels = ['a', 'e', 'i', 'o', 'u', 'å', 'ä', 'ö']
